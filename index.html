@@ -19,18 +19,19 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="./css/main.min.css">
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <header class="header">
-      <div class="container header-container">
+      <div class="header__container container">
         <nav class="nav">
-          <a class="logo header-logo" href="devstudio.com"
-            >Web<span class="logo-header">Studio</span></a
+          <a class="header__logo logo" href="devstudio.com"
+            >Web<span class="header__logo--component">Studio</span></a
           >
           <ul class="nav__list list">
             <li class="nav__item">
-              <a href="./index.html" class="nav__link link current studio-nav"
+              <a href="./index.html" class="nav__link nav__link--current link studio-nav"
                 >Студія</a
               >
             </li>
@@ -42,22 +43,22 @@
             </li>
           </ul>
         </nav>
-        <ul class="contact">
-          <li class="header__contact">
+        <ul class="contact contact-list">
+          <li class="contact__item">
             <a
               href="info@devstudio.com"
-              class="link"
+              class="contact__link contact__link--change"
               aria-label="envelope icon"
             >
-              <svg class="icon-email" width="16" height="12">
+              <svg class="contact__icon contact__icon--change" width="16" height="12">
                 <use href="./images/icons.svg#email"></use>
               </svg>
               <span>info@devstudio.com</span>
             </a>
           </li>
-          <li class="contact-item">
-            <a href="+380961111111" class="link" aria-label="telephone icon">
-              <svg class="icon-call" width="10" height="16">
+          <li class="contact__item">
+            <a href="+380961111111" class="contact__link contact__link--change" aria-label="telephone icon">
+              <svg class="contact__icon contact__icon--change" width="10" height="16">
                 <use href="./images/icons.svg#call"></use>
               </svg>
               <span>+38 096 111 11 11</span></a
@@ -67,7 +68,7 @@
       </div>
     </header>
     <main>
-      <section class="section hero">
+      <section class="hero">
         <div class="container">
           <h1 class="hero-text">Ефективні рішення для<br />вашого бізнесу</h1>
           <button type="button" class="hero-button btn" data-modal-open>
@@ -75,51 +76,51 @@
           </button>
         </div>
       </section>
-      <section class="section">
-        <div class="container feature-container">
-          <ul class="feature-list list">
-            <li class="feature-item">
-              <a class="trait-icon" aria-label="antenna icon">
+      <section class="feature">
+        <div class="feature-container container">
+          <ul class="feature__list list">
+            <li class="feature__item">
+              <a class="feature__icon" aria-label="antenna icon">
                 <svg class="trait-link" width="70" height="70">
                   <use href="./images/icons.svg#antenna"></use>
                 </svg>
               </a>
-              <h3 class="title">УВАГА ДО ДЕТАЛЕЙ</h3>
+              <h3 class="feature__title">УВАГА ДО ДЕТАЛЕЙ</h3>
               <p>
                 Ідейні міркування, і навіть початок повсякденної роботи з
                 формування позиції.
               </p>
             </li>
-            <li class="feature-item">
-              <a class="trait-icon" aria-label="clock icon">
+            <li class="feature__item">
+              <a class="feature__icon" aria-label="clock icon">
                 <svg class="trait-link" width="70" height="70">
                   <use href="./images/icons.svg#clock"></use>
                 </svg>
               </a>
-              <h3 class="title">ПУНКТУАЛЬНІСТЬ</h3>
+              <h3 class="feature__title">ПУНКТУАЛЬНІСТЬ</h3>
               <p>
                 Завдання організації, особливо рамки і місце навчання кадрів
                 тягне у себе.
               </p>
             </li>
-            <li class="feature-item">
-              <a class="trait-icon" aria-label="diagram icon">
+            <li class="feature__item">
+              <a class="feature__icon" aria-label="diagram icon">
                 <svg class="trait-link" width="70" height="70">
                   <use href="./images/icons.svg#diagram"></use>
                 </svg>
               </a>
-              <h3 class="title">ПЛАНУВАННЯ</h3>
+              <h3 class="feature__title">ПЛАНУВАННЯ</h3>
               <p>
                 Так само консультація з широким активом значною мірою зумовлює.
               </p>
             </li>
-            <li class="feature-item">
-              <a class="trait-icon" aria-label="astronaut icon">
+            <li class="feature__item">
+              <a class="feature__icon" aria-label="astronaut icon">
                 <svg class="trait-link" width="70" height="70">
                   <use href="./images/icons.svg#astronaut"></use>
                 </svg>
               </a>
-              <h3 class="title">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
+              <h3 class="feature__title">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
               <p>
                 Значимість цих проблем настільки очевидна, що реалізація
                 планових завдань.
@@ -128,47 +129,47 @@
           </ul>
         </div>
       </section>
-      <section class="section">
-        <div class="container container-gallery">
+      <section class="work">
+        <div class="work__container container">
           <h2 class="section-title">Чим ми займаємося</h2>
-          <ul class="feature-img">
-            <li class="gallery-item">
+          <ul class="work__list">
+            <li class="work__item">
               <img
                 src="./images/work-space1.jpg"
                 alt="work-space"
                 width="370"
                 height="294"
               />
-              <div class="overlay">
-                <p class="overlay-text">Десктопні додатки</p>
+              <div class="work__overlay">
+                <p class="work__text">Десктопні додатки</p>
               </div>
             </li>
-            <li class="gallery-item">
+            <li class="work__item">
               <img
                 src="./images/work-space2.jpg"
                 alt="work-space"
                 width="370"
                 height="294"
               />
-              <div class="overlay">
-                <p class="overlay-text">Мобільні додатки</p>
+              <div class="work__overlay">
+                <p class="work__text">Мобільні додатки</p>
               </div>
             </li>
-            <li class="gallery-item">
+            <li class="work__item">
               <img
                 src="./images/work-space3.jpg"
                 alt="work-space"
                 width="370"
                 height="294"
               />
-              <div class="overlay">
-                <p class="overlay-text">Дизайнерські рішення</p>
+              <div class="work__overlay">
+                <p class="work__text">Дизайнерські рішення</p>
               </div>
             </li>
           </ul>
         </div>
       </section>
-      <section class="section section-team">
+      <section class="section-team">
         <div class="container">
           <h2 class="section-title">Наша команда</h2>
           <ul class="team-list">
@@ -439,7 +440,7 @@
           </ul>
         </div>
       </section>
-      <section class="section section-client">
+      <section class="section-client">
         <h2 class="section-title">Постійні клієнти</h2>
         <div class="container">
           <ul class="client-list">
@@ -525,7 +526,7 @@
           <ul class="join-list">
             <li class="join-item">
               <a
-                class="join-link link"
+                class="socials-link join-link link"
                 href="https://https://www.instagram.com/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -538,7 +539,7 @@
             </li>
             <li class="join-item">
               <a
-                class="join-link link"
+                class="socials-link join-link link"
                 href="https://https://twitter.com/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -551,7 +552,7 @@
             </li>
             <li class="join-item">
               <a
-                class="join-link link"
+                class="socials-link join-link link"
                 href="https://www.facebook.com/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -564,7 +565,7 @@
             </li>
             <li class="join-item">
               <a
-                class="join-link link"
+                class="socials-link join-link link"
                 href="https://https://linkedin.com/"
                 target="_blank"
                 rel="noopener noreferrer"

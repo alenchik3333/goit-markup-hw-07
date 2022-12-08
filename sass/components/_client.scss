@@ -1,0 +1,35 @@
+.section-client {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  
+  .client-list {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .client-link {
+    display: flex;
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--socials-icons-color);
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    transition: border-color var(--transition-fast) 
+  }
+  
+  .client-icon {
+    fill:var(--socials-icons-color);
+    transition: fill var(--transition-fast) 
+  }
+  
+  .client-link:hover .client-icon,
+  .client-link:focus  .client-icon {
+    fill: var(--additional-text-color);
+  }
+  
+  .client-link:hover,
+  .client-link:focus {
+    border-color: var(--additional-text-color);
+  }
