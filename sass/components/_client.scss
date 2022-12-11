@@ -16,20 +16,24 @@
     border-radius: 4px;
     align-items: center;
     justify-content: center;
-    transition: border-color var(--transition-fast) 
+    transition: border-color var(--transition-fast);
+
+  &:hover,
+  &:focus {
+    border-color: var(--additional-text-color);
+  } 
+
+  &:hover .client-icon,
+  &:focus  .client-icon {
+    fill: var(--additional-text-color);
   }
+}
   
   .client-icon {
     fill:var(--socials-icons-color);
     transition: fill var(--transition-fast) 
   }
   
-  .client-link:hover .client-icon,
-  .client-link:focus  .client-icon {
-    fill: var(--additional-text-color);
-  }
   
-  .client-link:hover,
-  .client-link:focus {
-    border-color: var(--additional-text-color);
-  }
+  
+  

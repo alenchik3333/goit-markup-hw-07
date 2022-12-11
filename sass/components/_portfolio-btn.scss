@@ -39,17 +39,18 @@
     border: none;
     cursor: pointer;
     padding: 6px 22px;
-    transition: background var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast)
+    transition: background var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast);
+
+    &:hover,
+    &:focus {
+      background: var(--additional-text-color);
+      color: var(--accent-text-color);
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
   }
   
   .button-list .first {
     padding: 6px 25px;
   }
   
-  .button-list .link:hover,
-  .button-list .link:focus {
-    background: var(--additional-text-color);
-    color: var(--accent-text-color);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-      0px 2px 2px rgba(0, 0, 0, 0.12);
-  }

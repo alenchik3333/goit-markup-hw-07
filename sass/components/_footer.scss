@@ -34,24 +34,24 @@
     line-height: 1.71;
   }
   
-  .footer .address-map {
+  .address-map {
     color: var(--accent-text-color);
-    transition: color var(--transition-fast)  
+    transition: color var(--transition-fast);  
+
+    &:hover,
+    &:focus {
+     color: var(--additional-text-color);
+   }
   }
   
-  .footer .address-map:hover,
-  .footer .address-map:focus {
-      color: var(--additional-text-color);
-  }
-  
-  .footer .link-contact {
+  .link-contact {
     color: var(--footer-text-color);
-    transition: color var(--transition-fast)
-  }
-  
-  .footer .link-contact:hover,
-  .footer .link-contact:focus {
-    color: var(--additional-text-color);
+    transition: color var(--transition-fast);
+
+    &:hover,
+    &:focus {
+      color: var(--additional-text-color);
+    }
   }
   
   .footer-socials {
@@ -68,15 +68,15 @@
   
   .join-link  {
     background-color: var(--footer-socials-color);
+
+    &:hover,
+    &:focus {
+      background-color: var(--additional-text-color);
+    }
   }
   
   .join-icon {
     fill: var(--accent-text-color);
-  }
-  
-  .join-link:hover,
-  .join-link:focus {
-    background-color: var(--additional-text-color);
   }
   
   .footer-form-text {
@@ -103,14 +103,14 @@
     margin-right: 10px;
     transition: border var(--transition-fast), cursor var(--transition-fast);
     cursor: pointer;
-  }
-  
-  .footer-form-field::placeholder {
-    font-size: 16px;
-  }
-  
-  .footer-form-field:focus {
-    border: 1px solid var(--additional-text-color);
+
+    &::placeholder {
+      font-size: 16px;
+    }
+    
+    &:focus {
+      border: 1px solid var(--additional-text-color);
+    }
   }
   
   .footer-form-icon {

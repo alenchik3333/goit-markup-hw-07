@@ -14,20 +14,21 @@
     height: 44px;
     border-radius: 50%;
     background-color: var(--accent-text-color);
-    transition: background-color var(--transition-fast)
+    transition: background-color var(--transition-fast);
+
+    &:hover .socials-icon,
+    &:focus .socials-icon {
+      fill: var(--accent-text-color);
+    }
+    
+    &:hover,
+    &:focus {
+      background-color: var(--additional-text-color);
+    }
   }
   
   .socials-icon {
     fill:var(--socials-icons-color);
-    transition: fill var(--transition-fast)
+    transition: fill var(--transition-fast);
   }
   
-  .socials-link:hover .socials-icon,
-  .socials-link:focus .socials-icon {
-    fill: var(--accent-text-color);
-  }
-  
-  .socials-link:hover,
-  .socials-link:focus {
-    background-color: var(--additional-text-color);
-  }

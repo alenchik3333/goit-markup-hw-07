@@ -49,11 +49,11 @@
     align-items: center;
     cursor: pointer;
     transition: fill var(--transition-fast);
-  }
-  
-  .modal-btn:hover,
-  .modal-btn:focus {
-    fill: var(--additional-text-color);
+
+    &:hover,
+    &:focus {
+      fill: var(--additional-text-color);
+    }
   }
   
   .modal-text {
@@ -94,12 +94,16 @@
     border-radius: 4px;
     transition: border var(--transition-fast), outline-color var(--transition-fast);
     outline: 1px solid transparent;
-  }
-  
-  .modal-form-field:focus {
-    outline-color: var(--additional-text-color);
-    border: 1px solid var(--additional-text-color);
-    cursor: pointer;
+
+    &:focus {
+      outline-color: var(--additional-text-color);
+      border: 1px solid var(--additional-text-color);
+      cursor: pointer;
+    }
+
+    &:focus + .modal-form-icon {
+      fill: var(--additional-text-color);
+    }
   }
   
   .modal-form-icon {
@@ -111,10 +115,6 @@
     transition: fill var(--transition-fast);
   }
   
-  .modal-form-field:focus + .modal-form-icon {
-    fill: var(--additional-text-color);
-  }
-  
   .modal-form-message {
     display: block;
     width: 448px;
@@ -124,12 +124,16 @@
     resize: none;
     border: 1px solid var(--border-modal-input);
     border-radius: 4px;
-    transition: border var(--transition-fast), outline-color var(--transition-fast) ;
-  }
-  
-  .modal-form-message:focus {
-    outline-color: var(--additional-text-color);
-    cursor: pointer;
+    transition: border var(--transition-fast), outline-color var(--transition-fast);
+
+    &:focus {
+      outline-color: var(--additional-text-color);
+      cursor: pointer;
+    }
+
+    &:not(:placeholder-shown) {
+      border-color: var(--additional-text-color);
+    }
   }
   
   .modal-form-wrapper textarea::placeholder {
@@ -175,20 +179,16 @@
     border-radius: 2px;
     cursor: pointer;
     transition: outline var(--transition-fast), background-color var(--transition-fast), border var(--transition-fast);
-  }
-  
-  .modal-form-checkbox:checked {
-    outline: 2px solid var(--additional-text-color);
-    background-color: var(--additional-text-color);
-    background-image: url("data:image/svg+xml,%3Csvg width='13' height='10' viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.95703 4.75166L1.88825 4.68604L1.81923 4.75141L0.93123 5.59258L0.854858 5.66492L0.930974 5.73753L4.42671 9.07236L4.49574 9.1382L4.56476 9.07236L12.069 1.91352L12.1449 1.84116L12.069 1.76881L11.1873 0.927644L11.1183 0.861826L11.0493 0.927611L4.49577 7.17353L1.95703 4.75166Z' fill='white' stroke='white' stroke-width='0.2'/%3E%3C/svg%3E");
-  } 
-  
-  .modal-form-checkbox:focus {
-    border: 2px solid var(--additional-text-color);
-  }
-  
-  .modal-form-message:not(:placeholder-shown) {
-    border-color: var(--additional-text-color);
+
+    &:checked {
+      outline: 2px solid var(--additional-text-color);
+      background-color: var(--additional-text-color);
+      background-image: url("data:image/svg+xml,%3Csvg width='13' height='10' viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.95703 4.75166L1.88825 4.68604L1.81923 4.75141L0.93123 5.59258L0.854858 5.66492L0.930974 5.73753L4.42671 9.07236L4.49574 9.1382L4.56476 9.07236L12.069 1.91352L12.1449 1.84116L12.069 1.76881L11.1873 0.927644L11.1183 0.861826L11.0493 0.927611L4.49577 7.17353L1.95703 4.75166Z' fill='white' stroke='white' stroke-width='0.2'/%3E%3C/svg%3E");
+    } 
+    
+    &:focus {
+      border: 2px solid var(--additional-text-color);
+    }
   }
   
   .modal-form-btn {

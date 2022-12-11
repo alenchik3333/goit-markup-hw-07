@@ -11,11 +11,11 @@
   .nav__list .link {
     color: var(--title-text-color);
     transition: color var(--transition-fast);
-  }
-  
-  .nav__list .link:hover,
-  .nav__list .link:focus {
-    color: var(--additional-text-color);
+
+    &:hover,
+    &:focus {
+      color: var(--additional-text-color);
+    }
   }
   
   .nav__list .nav__link--current {
